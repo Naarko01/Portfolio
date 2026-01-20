@@ -5,7 +5,7 @@ function Header() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setScrolled(window.scrollY > 50);
+			setScrolled(window.scrollY > 2);
 		};
 		window.addEventListener("scroll", handleScroll);
 
@@ -19,17 +19,29 @@ function Header() {
 	];
 
 	return (
-		<header className={scrolled ? "scrolledHeader" : "defaultHeader"}>
-			<div>
-				<a href="#">{"<Dev />"}</a>
+		<header
+			className={`header-container ${scrolled ? "scrolled" : "default"}`}
+		>
+			<div className="nav-container">
+				<a href="#" className="nav-container__home-link">
+					{"<Dev />"}
+				</a>
+
+				<nav className="nav-container__navbar">
+					{navLinks.map((link) => (
+						<a
+							className="nav-container__navbar--links"
+							key={link.href}
+							href={link.href}
+						>
+							{link.label}
+						</a>
+					))}
+				</nav>
+				<a href="" className="nav-container__navbar--cv">
+					Voir mon CV
+				</a>
 			</div>
-			<nav>
-				{navLinks.map((link) => (
-					<a key={link.href} href={link.href}>
-						{link.label}
-					</a>
-				))}
-			</nav>
 		</header>
 	);
 }

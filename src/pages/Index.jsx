@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 
 function Index() {
 	return (
-		<div>
+		<div className="index--main-container">
 			<Header />
 			<main>
 				<Intro />

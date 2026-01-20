@@ -9,11 +9,15 @@ function NotFound() {
 	}, [location.pathname]);
 
 	return (
-		<div>
-			<div>
-				<h1>404</h1>
-				<p> Oops! Cette page n'existe pas</p>
-				<a href="/">Retourner à l'accueil</a>
+		<div className="notFound">
+			<div className="notFound__text-container">
+				<h1 className="notFound__text-container--title">404</h1>
+				<p className="notFound__text-container--text">
+					Oops! Cette page n'existe pas
+				</p>
+				<a className="notFound__text-container--link" href="/">
+					Retourner à l'accueil
+				</a>
 			</div>
 		</div>
 	);

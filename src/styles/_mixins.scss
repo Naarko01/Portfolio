@@ -1,0 +1,88 @@
+@use "_variables" as v;
+
+@mixin container {
+   max-width: 1400px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
+
+@mixin glass {
+   background: v.$glass-bg;
+   backdrop-filter: blur(12px);
+   border: 1px solid v.$glass-border;
+}
+
+@mixin transition-colors {
+   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+   transition-timing-function: v.$base-trans-function;
+   transition-duration: 150ms;
+}
+
+@mixin link-underline($color, $height: 1px, $duration: 0.3s) {
+   position: relative;
+
+   &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: $height;
+      background: $color;
+      transition: width $duration;
+   }
+
+   &:hover::after {
+      width: 100%;
+   }
+}
+
+@mixin dot-pattern {
+   background-image: radial-gradient(rgba(v.$muted-foreground, 0.15) 1px, transparent 1px);
+   background-size: 24px 24px;
+}
+
+@mixin animate-fade-up($delay) {
+   animation: fadeUp 0.6s ease-out forwards;
+   opacity: 0;
+   animation-delay: $delay;
+}
+
+@mixin text-gradient {
+   background: v.$gradient-text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+}
+
+@mixin button {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+   border: none;
+   cursor: pointer;
+   text-decoration: none;
+   white-space: nowrap;
+   border-radius: 0.75rem;
+   font-weight: 500;
+   line-height: 1.5rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   height: 3rem;
+   font-size: 1rem;
+   transition:
+      transform 300ms v.$base-trans-function,
+      box-shadow 300ms v.$base-trans-function,
+      background-color 300ms v.$base-trans-function,
+      border-color 300ms v.$base-trans-function,
+      outline-offset 100ms v.$base-trans-function;
+   -webkit-tap-highlight-color: transparent;
+
+   &:focus-visible {
+      outline: 2px solid v.$primary;
+      outline-offset: 2px;
+   }
+}
