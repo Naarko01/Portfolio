@@ -1,11 +1,31 @@
 /* eslint-disable no-unused-vars */
 import { Mail, Github, Linkedin } from "lucide-react";
+import { useState, useEffect } from "react";
 
 function Contact() {
 	const socials = [
 		{ icon: Github, href: "#", label: "GitHub" },
 		{ icon: Linkedin, href: "#", label: "LinkedIn" },
 	];
+	const [isMobile, setIsMobile] = useState(() =>
+		typeof window !== "undefined" ?
+			window.matchMedia("(max-width: 768px)").matches
+		:	false,
+	);
+
+	useEffect(() => {
+		if (typeof window === "undefined") return;
+		const mq = window.matchMedia("(max-width:768px)");
+		const handler = (e) => setIsMobile(e.matches);
+
+		if (mq.addEventListener) mq.addEventListener("change", handler);
+		else mq.addEventListener(handler);
+
+		return () => {
+			if (mq.removeEventListener) mq.removeEventListener("change", handler);
+			else mq.removeEventListener(handler);
+		};
+	});
 
 	return (
 		<section id="contact" className="contact">
@@ -26,7 +46,7 @@ function Contact() {
 
 					<a className="contact__wrapper--mail">
 						<Mail className="contact__wrapper--mail-icon" />
-						maxime.drouhin71@gmail.com
+						{isMobile ? "Email" : "maxime.drouhin71@gmail.com"}
 					</a>
 					<div className="contact__wrapper__socials">
 						{socials.map(({ icon: Icon, href, label }) => (

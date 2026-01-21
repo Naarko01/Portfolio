@@ -305,6 +305,11 @@ h3 {
 
       @include mixins.transition-colors();
 
+      @media (max-width: 640px) {
+         bottom: 1rem;
+         left: 47%;
+      }
+
       &:hover {
          color: v.$primary;
       }

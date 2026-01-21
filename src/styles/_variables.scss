@@ -16,9 +16,6 @@ $secondary-foreground: hsl(210, 20%, 90%);
 $muted: hsl(220, 15%, 18%);
 $muted-foreground: hsl(215, 15%, 55%);
 
-$destructive: hsl(0, 84.2%, 60.2%);
-$destructive-foreground: hsl(210, 40%, 98%);
-
 $border: hsl(220, 15%, 20%);
 $input: hsl(220, 15%, 20%);
 $ring: hsl(166, 76%, 52%);
@@ -36,16 +33,6 @@ $gradient-text: linear-gradient(135deg, hsl(166, 76%, 52%) 0%, hsl(180, 70%, 60%
 
 $glass-bg: hsla(220, 18%, 10%, 0.8);
 $glass-border: hsla(220, 15%, 25%, 0.5);
-
-/* Sidebar */
-$sidebar-background: hsl(220, 18%, 8%);
-$sidebar-foreground: hsl(210, 20%, 90%);
-$sidebar-primary: hsl(166, 76%, 52%);
-$sidebar-primary-foreground: hsl(220, 20%, 7%);
-$sidebar-accent: hsl(220, 15%, 15%);
-$sidebar-accent-foreground: hsl(210, 20%, 90%);
-$sidebar-border: hsl(220, 15%, 18%);
-$sidebar-ring: hsl(166, 76%, 52%);
 
 /*Misc*/
 $font-mono: "JetBrains Mono", monospace;
