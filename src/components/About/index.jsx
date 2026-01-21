@@ -11,15 +11,18 @@ function About() {
 	];
 
 	return (
-		<section id="about" className="">
-			<div className="">
-				<div className="">
+		<section id="about" className="aboutSection">
+			<div className="aboutSection__mainContainer">
+				<div className="aboutSection__gridContainer">
 					<div>
-						<p className="">01 — À propos</p>
-						<h2 className="">
-							Créer des interfaces qui<span className="">marquent</span>
+						<p className="aboutSection__gridContainer--firstText">
+							01 — À propos
+						</p>
+						<h2 className="aboutSection__gridContainer--title">
+							Créer des interfaces qui
+							<span className="titleAccent"> marquent</span>
 						</h2>
-						<div className=" ">
+						<div className="aboutSection__gridContainer--secondText">
 							<p>
 								Développeur frontend passionné avec plus de X années
 								d'expérience dans la création d'applications web
@@ -38,12 +41,15 @@ function About() {
 							</p>
 						</div>
 					</div>
-					<div className="">
-						<div className="">
-							<p className="">Technologies</p>
-							<div className="">
+					<div className="aboutSection__gridContainer__skillsList">
+						<div className="aboutSection__gridContainer__skillsList--container">
+							<p>Technologies</p>
+							<div className="aboutSection__gridContainer__skillsList--wrapper">
 								{skills.map((skill) => (
-									<span key={skill} className="">
+									<span
+										key={skill}
+										className="aboutSection__gridContainer__skillsList--item"
+									>
 										{skill}
 									</span>
 								))}
