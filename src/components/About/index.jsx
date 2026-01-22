@@ -10,14 +10,14 @@ function About() {
 							01 — À propos
 						</p>
 						<h2 className="aboutSection__gridContainer--title">
-							Créer des interfaces qui
-							<span className="titleAccent"> marquent</span>
+							Créer des interfaces
+							<span className="titleAccent"> modernes</span>
 						</h2>
 						<div className="aboutSection__gridContainer--secondText">
 							<p>
-								Développeur frontend passionné avec plus de X années
-								d'expérience dans la création d'applications web
-								modernes. Je me spécialise dans React et l'écosystème
+								Développeur frontend passionné dans la création
+								d'applications, principalement web, modernes et
+								efficaces. Je me spécialise dans React et l'écosystème
 								JavaScript.
 							</p>
 							<p>
@@ -27,8 +27,9 @@ function About() {
 								détails et à l'expérience utilisateur.
 							</p>
 							<p>
-								Actuellement disponible pour des missions freelance et
-								des collaborations sur des projets innovants.
+								Actuellement disponible pour un emploi et des
+								collaborations sur des projets de toute sorte.
+								J'apprécie particulièrement le travail en équipe.
 							</p>
 						</div>
 					</div>

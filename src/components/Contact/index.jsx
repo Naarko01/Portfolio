@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function Contact() {
 	const socials = [
-		{ icon: Github, href: "#", label: "GitHub" },
+		{ icon: Github, href: "https://github.com/Naarko01", label: "GitHub" },
 		{ icon: Linkedin, href: "#", label: "LinkedIn" },
 	];
 	const [isMobile, setIsMobile] = useState(() =>
