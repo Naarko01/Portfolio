@@ -1,0 +1,35 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins";
+
+.footer {
+   padding: 2rem 0;
+   border-top-width: 1px;
+   border-color: v.$border;
+
+   &__container {
+      @include mixins.container();
+
+      &__content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+         gap: 1rem;
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+         color: v.$muted-foreground;
+
+         @media (min-width: 768px) {
+            flex-direction: row;
+         }
+
+         &--text {
+            font-family: v.$font-mono;
+
+            &-accent {
+               color: v.$primary;
+            }
+         }
+      }
+   }
+}

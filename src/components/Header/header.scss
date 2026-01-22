@@ -1,0 +1,75 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins";
+
+.header-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 50;
+   transition: all 300ms v.$base-trans-function;
+
+   &.default {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+   }
+   &.scrolled {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      @include mixins.glass();
+   }
+
+   .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include mixins.container();
+
+      &__home-link {
+         font-size: 1.125rem;
+         line-height: 1.75rem;
+         font-weight: 500;
+         color: v.$primary;
+         font-family: v.$font-mono;
+      }
+
+      &__navbar {
+         display: none;
+         align-items: center;
+         gap: 2rem;
+
+         @media (min-width: 768px) {
+            display: flex;
+         }
+
+         &--links {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            color: v.$muted-foreground;
+            position: relative;
+            transition: color 150ms v.$base-trans-function;
+
+            @include mixins.link-underline(v.$primary);
+
+            &:hover {
+               color: v.$foreground;
+            }
+         }
+
+         &--cv {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 500;
+            color: v.$primary;
+
+            @include mixins.transition-colors();
+
+            &:hover {
+               color: rgba(v.$primary, 0.8);
+            }
+         }
+      }
+   }
+}

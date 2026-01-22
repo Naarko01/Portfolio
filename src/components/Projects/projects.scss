@@ -1,0 +1,44 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins";
+
+.projects {
+   padding: 8rem 0;
+   position: relative;
+
+   &__container {
+      @include mixins.container();
+
+      &--header {
+         margin-bottom: 4rem;
+
+         &-title {
+            font-family: v.$font-mono;
+            color: v.$primary;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            margin-bottom: 1rem;
+         }
+         &-content {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            @media (min-width: 768px) {
+               font-size: 3rem;
+               line-height: 1;
+            }
+            &-accent {
+               @include mixins.text-gradient();
+            }
+         }
+      }
+      &--cardsWrapper {
+         display: grid;
+         gap: 1.5rem;
+
+         @media (min-width: 768px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2rem;
+         }
+      }
+   }
+}

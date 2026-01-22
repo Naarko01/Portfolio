@@ -1,14 +1,5 @@
 function About() {
-	const skills = [
-		"React",
-		"TypeScript",
-		"Next.js",
-		"Tailwind CSS",
-		"Node.js",
-		"GraphQL",
-		"Figma",
-		"Git",
-	];
+	const skills = ["React", "Redux", "Node.js", "SASS", "Figma", "Git"];
 
 	return (
 		<section id="about" className="aboutSection">
