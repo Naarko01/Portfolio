@@ -2,39 +2,39 @@ import ProjectCard from "../ProjectCard";
 
 const projects = [
 	{
-		title: "Application E-commerce",
+		title: "Portfolio d'architecte",
 		description:
-			"Une plateforme e-commerce moderne avec panier, paiement Stripe et gestion des commandes. Interface fluide et responsive.",
-		tags: ["React", "Next.js", "Stripe", "Tailwind"],
-		image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=450&fit=crop",
-		liveUrl: "#",
-		githubUrl: "#",
-		putAhead: true,
+			"Le portfolio de l'architecte d'intérieur Sophie Bluel avec présentation de ses projets et ses prestations. Une connexion administrateur est possible avec un backend pour modifier / supprimer / ajouter des projets",
+		tags: ["Javascript", "CSS", "Node.js"],
+		image: "./src/assets/sophie_bluel.webp",
+		githubUrl: "https://github.com/Naarko01/OC_Projet_6",
 	},
 	{
-		title: "Dashboard Analytics",
+		title: "App web bancaire",
 		description:
-			"Tableau de bord interactif pour visualiser des données complexes avec graphiques et filtres dynamiques.",
-		tags: ["TypeScript", "React", "D3.js", "Node.js"],
-		image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop",
-		liveUrl: "#",
-		githubUrl: "#",
+			"Application bancaire d'ArgentBank, permettant la connexion des clients à leurs comptes, la consultation et l'annotation de leurs transactions",
+		tags: ["React", "Redux", "CSS", "Node.js"],
+		image: "./src/assets/argent-bank.webp",
+		liveUrl: "https://naarko01.github.io/ArgentBank/",
+		githubUrl: "https://github.com/Naarko01/ArgentBank/tree/main",
 	},
 	{
-		title: "App Mobile Fitness",
+		title: "App de recherche et location d'appartement",
 		description:
-			"Application de suivi fitness avec programmes personnalisés et statistiques de progression.",
-		tags: ["React Native", "Firebase", "TypeScript"],
-		image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=450&fit=crop",
-		liveUrl: "#",
+			"Application d'agence immobilière, Kasa, proposant des appartements à la location.",
+		tags: ["React", "SCSS", "Node.js"],
+		image: "./src/assets/kasa.webp",
+		liveUrl: "https://naarko01.github.io/Kasa/",
+		githubUrl: "https://github.com/Naarko01/Kasa",
 	},
 	{
 		title: "Site Portfolio Créatif",
 		description:
 			"Portfolio artistique avec animations WebGL et transitions fluides pour une photographe.",
-		tags: ["Three.js", "GSAP", "React"],
-		image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=450&fit=crop",
-		githubUrl: "#",
+		tags: ["Javascript", "SCSS"],
+		image: "./src/assets/ohmyfood.webp",
+		liveUrl: "https://naarko01.github.io/OhMyFood/",
+		githubUrl: "https://github.com/Naarko01/OhMyFood",
 	},
 ];
 
