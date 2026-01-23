@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import myCv from "../../assets/CV_Maxime_DROUHIN.pdf";
 
 function Header() {
 	const [scrolled, setScrolled] = useState(false);
@@ -38,7 +39,12 @@ function Header() {
 						</a>
 					))}
 				</nav>
-				<a href="" className="nav-container__navbar--cv">
+				<a
+					href={myCv}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="nav-container__navbar--cv"
+				>
 					Voir mon CV
 				</a>
 			</div>
