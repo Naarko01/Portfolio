@@ -14,9 +14,21 @@ function Header() {
 	}, []);
 
 	const navLinks = [
-		{ label: "À propos", href: "#about" },
-		{ label: "Projets", href: "#projects" },
-		{ label: "Contact", href: "#contact" },
+		{
+			label: "À propos",
+			href: "#about",
+			description: "Lien vers la section À propos",
+		},
+		{
+			label: "Projets",
+			href: "#projects",
+			description: "Lien vers la section projets",
+		},
+		{
+			label: "Contact",
+			href: "#contact",
+			description: "Lien vers la section contact",
+		},
 	];
 
 	return (
@@ -24,7 +36,11 @@ function Header() {
 			className={`header-container ${scrolled ? "scrolled" : "default"}`}
 		>
 			<div className="nav-container">
-				<a href="#" className="nav-container__home-link">
+				<a
+					href="#"
+					className="nav-container__home-link"
+					aria-label="Recharger la page"
+				>
 					{"<Dev />"}
 				</a>
 
@@ -34,6 +50,7 @@ function Header() {
 							className="nav-container__navbar--links"
 							key={link.href}
 							href={link.href}
+							aria-label={link.description}
 						>
 							{link.label}
 						</a>
@@ -44,6 +61,7 @@ function Header() {
 					target="_blank"
 					rel="noopener noreferrer"
 					className="nav-container__navbar--cv"
+					aria-label="Lien vers mon CV"
 				>
 					Voir mon CV
 				</a>

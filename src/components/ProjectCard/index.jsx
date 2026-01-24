@@ -11,13 +11,10 @@ function ProjectCard({
 }) {
 	return (
 		<article className={`projectCard ${putAhead ? "ahead" : ""}`}>
-			{/* Image */}
 			<div className="projectCard__image">
 				<img src={image} alt={title} />
 				<div className="projectCard__image--filter" />
 			</div>
-
-			{/* Content */}
 			<div className="projectCard__content">
 				<div className="projectCard__content__header">
 					<h3 className="projectCard__content__header--title">{title}</h3>

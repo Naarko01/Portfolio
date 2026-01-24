@@ -12,6 +12,7 @@ function Contact() {
 			window.matchMedia("(max-width: 768px)").matches
 		:	false,
 	);
+	const mailContact = "maxime.drouhin71@gmail.com";
 
 	useEffect(() => {
 		if (typeof window === "undefined") return;
@@ -44,9 +45,13 @@ function Contact() {
 						N'hésitez pas à me contacter !
 					</p>
 
-					<a className="contact__wrapper--mail">
+					<a
+						href={`mailto:${mailContact}`}
+						className="contact__wrapper--mail"
+						aria-label="Envoyer un mail"
+					>
 						<Mail className="contact__wrapper--mail-icon" />
-						{isMobile ? "Email" : "maxime.drouhin71@gmail.com"}
+						{isMobile ? "Email" : mailContact}
 					</a>
 					<div className="contact__wrapper__socials">
 						{socials.map(({ icon: Icon, href, label }) => (

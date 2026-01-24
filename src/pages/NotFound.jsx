@@ -15,7 +15,11 @@ function NotFound() {
 				<p className="notFound__text-container--text">
 					Oops! Cette page n'existe pas
 				</p>
-				<a className="notFound__text-container--link" href="/">
+				<a
+					className="notFound__text-container--link"
+					href="/"
+					aria-label="Retourner à la page principale"
+				>
 					Retourner à l'accueil
 				</a>
 			</div>
