@@ -10,6 +10,7 @@
       @include mixins.container();
 
       &__content {
+         position: relative;
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -28,6 +29,17 @@
 
             &-accent {
                color: v.$primary;
+            }
+         }
+         &--modal {
+            cursor: pointer;
+            margin-right: 5rem;
+            transition: color 150ms v.$base-trans-function;
+
+            @include mixins.link-underline(v.$primary);
+
+            &:hover {
+               color: v.$foreground;
             }
          }
       }

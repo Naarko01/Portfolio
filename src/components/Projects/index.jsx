@@ -32,9 +32,9 @@ const projects = [
 		githubUrl: "https://github.com/Naarko01/Kasa",
 	},
 	{
-		title: "Site Portfolio Créatif",
+		title: "Site commande de repas",
 		description:
-			"Portfolio artistique avec animations WebGL et transitions fluides pour une photographe.",
+			"Site de commande de repas, avec menus créés par les restaurateurs. Application d'animations CSS personnalisées et fluides",
 		tags: ["Javascript", "SCSS"],
 		image: ohmyfoodImg,
 		liveUrl: "https://naarko01.github.io/OhMyFood/",

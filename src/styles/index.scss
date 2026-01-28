@@ -88,3 +88,74 @@ h3 {
       }
    }
 }
+
+/* Legals modal */
+
+.modal {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   height: fit-content;
+   bottom: 10%;
+   left: 10%;
+   right: 10%;
+   top: 15%;
+   z-index: 30;
+   border: 3px solid transparent;
+   border-image-source: v.$gradient-text;
+   border-image-slice: 1;
+   background-color: v.$muted;
+}
+
+.overlay {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba($color: v.$glass-bg, $alpha: 0.6);
+   z-index: 30;
+}
+
+.legals {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   margin: 2rem;
+   color: v.$foreground;
+
+   h1,
+   h2 {
+      color: v.$primary;
+      margin-bottom: 0.75rem;
+   }
+
+   &__close {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      cursor: pointer;
+      transition: transform 150ms v.$base-trans-function;
+
+      &:hover {
+         transform: scale(1.2);
+      }
+   }
+
+   &__info {
+      text-align: center;
+   }
+
+   &__contact {
+      ul {
+         padding: 0;
+         margin: 0;
+
+         li {
+            list-style: none;
+            margin-bottom: 0.25rem;
+         }
+      }
+   }
+}
