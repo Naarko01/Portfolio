@@ -104,7 +104,7 @@ h3 {
    border: 3px solid transparent;
    border-image-source: v.$gradient-text;
    border-image-slice: 1;
-   background-color: v.$muted;
+   background-color: rgba(v.$muted, 0.95);
 }
 
 .overlay {
