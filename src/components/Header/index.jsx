@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import myCv from "../../assets/CV_Maxime_DROUHIN.pdf";
+import myCv from "../../assets/CV_Maxime_DROUHIN(2).pdf";
 
 function Header() {
 	const [scrolled, setScrolled] = useState(false);
@@ -32,37 +32,29 @@ function Header() {
 	];
 
 	return (
-		<header
-			className={`header-container ${scrolled ? "scrolled" : "default"}`}
-		>
-			<div className="nav-container">
-				<a
-					href="#"
-					className="nav-container__home-link"
-					aria-label="Recharger la page"
-				>
+		<header className={`header-container ${scrolled ? "scrolled" : "default"}`}>
+			<div className='nav-container'>
+				<a href='#' className='nav-container__home-link' aria-label='Recharger la page'>
 					{"<Dev />"}
 				</a>
 
-				<nav className="nav-container__navbar">
+				<nav className='nav-container__navbar'>
 					{navLinks.map((link) => (
 						<a
-							className="nav-container__navbar--links"
+							className='nav-container__navbar--links'
 							key={link.href}
 							href={link.href}
-							aria-label={link.description}
-						>
+							aria-label={link.description}>
 							{link.label}
 						</a>
 					))}
 				</nav>
 				<a
 					href={myCv}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="nav-container__navbar--cv"
-					aria-label="Lien vers mon CV"
-				>
+					target='_blank'
+					rel='noopener noreferrer'
+					className='nav-container__navbar--cv'
+					aria-label='Lien vers mon CV'>
 					Voir mon CV
 				</a>
 			</div>
